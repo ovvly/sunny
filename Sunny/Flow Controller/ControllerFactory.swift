@@ -6,6 +6,8 @@ protocol ControllerFactory {
 
 final class MainControllerFactory: ControllerFactory {
     func buildLocationsViewController() -> LocationsViewController {
-        return LocationsViewController(viewModel: MainLocationsViewModel())
+        //TODO: Move service to dependeny container
+        let viewModel = MainLocationsViewModel(locationService: MainLocationService())
+        return LocationsViewController(viewModel: viewModel)
     }
 }

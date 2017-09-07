@@ -10,7 +10,6 @@
 		0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D61F01F61369E00AEA609 /* AppDelegate.swift */; };
 		0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F71F61369E00AEA609 /* Assets.xcassets */; };
 		0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */; };
-		0D9D62091F61376D00AEA609 /* SunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62081F61376D00AEA609 /* SunnyTests.swift */; };
 		0D9D62131F613BAC00AEA609 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62121F613BAC00AEA609 /* FlowController.swift */; };
 		0D9D62151F613C4500AEA609 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62141F613C4500AEA609 /* ControllerFactory.swift */; };
 		0D9D621A1F613F6500AEA609 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62191F613F6500AEA609 /* LocationsViewController.swift */; };
@@ -18,6 +17,10 @@
 		0D9D621F1F6141A500AEA609 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D621E1F6141A500AEA609 /* LocationsViewModel.swift */; };
 		0D9D62221F6141BB00AEA609 /* LocationsViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62201F6141AE00AEA609 /* LocationsViewModelSpec.swift */; };
 		0D9D62241F6143AF00AEA609 /* LocationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62231F6143AF00AEA609 /* LocationsDataSource.swift */; };
+		0D9D62261F61546100AEA609 /* LocationsDataSourceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62251F61546100AEA609 /* LocationsDataSourceSpec.swift */; };
+		0D9D62291F61558B00AEA609 /* Location+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62281F61558B00AEA609 /* Location+Fixture.swift */; };
+		0D9D622C1F6155D600AEA609 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D622B1F6155D600AEA609 /* Location.swift */; };
+		0D9D622F1F61580100AEA609 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D622E1F61580100AEA609 /* LocationService.swift */; };
 		1989DDA2DD911A3C3F096034 /* Pods_Sunny_SunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46517901182AAE810FF5C27 /* Pods_Sunny_SunnyTests.framework */; };
 		DF457FA6D57698B4EA72EEC3 /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140EFC170C29AB6BDA362B1C /* Pods_Sunny.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +42,6 @@
 		0D9D61FA1F61369E00AEA609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D9D61FC1F61369E00AEA609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D9D62061F61376D00AEA609 /* SunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D9D62081F61376D00AEA609 /* SunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnyTests.swift; sourceTree = "<group>"; };
 		0D9D620A1F61376D00AEA609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D9D62121F613BAC00AEA609 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlowController.swift; path = "Flow Controller/FlowController.swift"; sourceTree = "<group>"; };
 		0D9D62141F613C4500AEA609 /* ControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ControllerFactory.swift; path = "Flow Controller/ControllerFactory.swift"; sourceTree = "<group>"; };
@@ -48,6 +50,10 @@
 		0D9D621E1F6141A500AEA609 /* LocationsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewModel.swift; path = Modules/Locations/LocationsViewModel.swift; sourceTree = "<group>"; };
 		0D9D62201F6141AE00AEA609 /* LocationsViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsViewModelSpec.swift; path = Modules/Locations/LocationsViewModelSpec.swift; sourceTree = "<group>"; };
 		0D9D62231F6143AF00AEA609 /* LocationsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsDataSource.swift; path = Modules/Locations/LocationsDataSource.swift; sourceTree = "<group>"; };
+		0D9D62251F61546100AEA609 /* LocationsDataSourceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsDataSourceSpec.swift; path = Modules/Locations/LocationsDataSourceSpec.swift; sourceTree = "<group>"; };
+		0D9D62281F61558B00AEA609 /* Location+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Location+Fixture.swift"; path = "Fixtures/Location+Fixture.swift"; sourceTree = "<group>"; };
+		0D9D622B1F6155D600AEA609 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Model/Location.swift; sourceTree = "<group>"; };
+		0D9D622E1F61580100AEA609 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
 		140EFC170C29AB6BDA362B1C /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B035429B202655A5F380AE /* Pods-Sunny-SunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny-SunnyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny-SunnyTests/Pods-Sunny-SunnyTests.release.xcconfig"; sourceTree = "<group>"; };
 		A3B1E384177E0FEF868C519E /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,8 +105,10 @@
 		0D9D61EF1F61369E00AEA609 /* Sunny */ = {
 			isa = PBXGroup;
 			children = (
+				0D9D622D1F6157EC00AEA609 /* Services */,
 				0D9D62111F613B7300AEA609 /* Flow Controller */,
 				0D9D62171F613F0F00AEA609 /* Modules */,
+				0D9D622A1F6155C200AEA609 /* Model */,
 				0D9D61F01F61369E00AEA609 /* AppDelegate.swift */,
 				0D9D61F71F61369E00AEA609 /* Assets.xcassets */,
 				0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */,
@@ -112,7 +120,7 @@
 		0D9D62071F61376D00AEA609 /* SunnyTests */ = {
 			isa = PBXGroup;
 			children = (
-				0D9D62081F61376D00AEA609 /* SunnyTests.swift */,
+				0D9D62271F61556E00AEA609 /* Fixtures */,
 				0D9D620A1F61376D00AEA609 /* Info.plist */,
 			);
 			path = SunnyTests;
@@ -143,8 +151,33 @@
 				0D9D621E1F6141A500AEA609 /* LocationsViewModel.swift */,
 				0D9D62201F6141AE00AEA609 /* LocationsViewModelSpec.swift */,
 				0D9D62231F6143AF00AEA609 /* LocationsDataSource.swift */,
+				0D9D62251F61546100AEA609 /* LocationsDataSourceSpec.swift */,
 			);
 			name = Locations;
+			sourceTree = "<group>";
+		};
+		0D9D62271F61556E00AEA609 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D62281F61558B00AEA609 /* Location+Fixture.swift */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		0D9D622A1F6155C200AEA609 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D622B1F6155D600AEA609 /* Location.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0D9D622D1F6157EC00AEA609 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D622E1F61580100AEA609 /* LocationService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		1DDD2413E0F65F779296D708 /* Frameworks */ = {
@@ -370,10 +403,12 @@
 			files = (
 				0D9D621F1F6141A500AEA609 /* LocationsViewModel.swift in Sources */,
 				0D9D621A1F613F6500AEA609 /* LocationsViewController.swift in Sources */,
+				0D9D622F1F61580100AEA609 /* LocationService.swift in Sources */,
 				0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */,
 				0D9D62151F613C4500AEA609 /* ControllerFactory.swift in Sources */,
 				0D9D62241F6143AF00AEA609 /* LocationsDataSource.swift in Sources */,
 				0D9D62131F613BAC00AEA609 /* FlowController.swift in Sources */,
+				0D9D622C1F6155D600AEA609 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +416,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9D62291F61558B00AEA609 /* Location+Fixture.swift in Sources */,
 				0D9D62221F6141BB00AEA609 /* LocationsViewModelSpec.swift in Sources */,
 				0D9D621D1F613F7F00AEA609 /* LocationsViewControllerSpec.swift in Sources */,
-				0D9D62091F61376D00AEA609 /* SunnyTests.swift in Sources */,
+				0D9D62261F61546100AEA609 /* LocationsDataSourceSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

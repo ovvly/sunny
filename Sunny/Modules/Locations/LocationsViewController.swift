@@ -1,10 +1,16 @@
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LocationsViewController: UITableViewController {
     let viewModel: LocationsViewModel
 
-    init(viewModel: LocationsViewModel) {
+    private let dataSource: LocationsDataSource
+    private let disposeBag = DisposeBag()
+
+    init(viewModel: LocationsViewModel, dataSource: LocationsDataSource = LocationsDataSource()) {
         self.viewModel = viewModel
+        self.dataSource = dataSource
 
         super.init(style: .plain)
     }
@@ -17,12 +23,24 @@ class LocationsViewController: UITableViewController {
         super.viewDidLoad()
 
         setupTableView()
+        fetchLocations()
     }
 
     //MARK: Helpers
 
     private func setupTableView() {
         tableView.tableFooterView = UIView()
-        viewModel.setup(tableView: tableView)
+        tableView.dataSource = dataSource
+        dataSource.registerCells(for: tableView)
+    }
+
+    private func fetchLocations() {
+        viewModel.loadLocations()
+            .asDriver(onErrorJustReturn: [])
+            .drive(onNext: { [unowned self] locations in
+                self.dataSource.locations = locations
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
     }
 }

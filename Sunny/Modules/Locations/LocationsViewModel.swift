@@ -1,14 +1,19 @@
 import Foundation
 import UIKit
+import RxSwift
 
 protocol LocationsViewModel {
-    func setup(tableView: UITableView)
+    func loadLocations() -> Observable<[Location]>
 }
 
 class MainLocationsViewModel: LocationsViewModel {
-    private let dataSource = LocationsDataSource()
+    private let locationService: LocationService
 
-    func setup(tableView: UITableView) {
-        tableView.dataSource = dataSource
+    init(locationService: LocationService) {
+        self.locationService = locationService
+    }
+
+    func loadLocations() -> Observable<[Location]> {
+        return locationService.fetchLocations()
     }
 }
