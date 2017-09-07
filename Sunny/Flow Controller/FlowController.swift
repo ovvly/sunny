@@ -8,7 +8,7 @@ final class MainFlowController: FlowController {
     fileprivate let controllerFactory: ControllerFactory
 
     fileprivate lazy var mainViewController: UIViewController = {
-        let mainController = self.controllerFactory.buildMainViewController()
+        let mainController = self.controllerFactory.buildLocationsViewController()
         return mainController
     }()
 

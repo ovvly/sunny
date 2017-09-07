@@ -1,15 +1,11 @@
 import UIKit
 
-typealias MainViewController = UIViewController
-
 protocol ControllerFactory {
-    func buildMainViewController() -> MainViewController
+    func buildLocationsViewController() -> LocationsViewController
  }
 
 final class MainControllerFactory: ControllerFactory {
-
-    func buildMainViewController() -> MainViewController {
-        return ViewController()
+    func buildLocationsViewController() -> LocationsViewController {
+        return LocationsViewController(viewModel: MainLocationsViewModel())
     }
 }
-
