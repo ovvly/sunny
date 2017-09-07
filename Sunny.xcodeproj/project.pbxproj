@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D61F01F61369E00AEA609 /* AppDelegate.swift */; };
+		0D9D61F31F61369E00AEA609 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D61F21F61369E00AEA609 /* ViewController.swift */; };
+		0D9D61F61F61369E00AEA609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F41F61369E00AEA609 /* Main.storyboard */; };
+		0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F71F61369E00AEA609 /* Assets.xcassets */; };
+		0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */; };
+		0D9D62091F61376D00AEA609 /* SunnyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D62081F61376D00AEA609 /* SunnyTests.swift */; };
+		1989DDA2DD911A3C3F096034 /* Pods_Sunny_SunnyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46517901182AAE810FF5C27 /* Pods_Sunny_SunnyTests.framework */; };
+		DF457FA6D57698B4EA72EEC3 /* Pods_Sunny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140EFC170C29AB6BDA362B1C /* Pods_Sunny.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D9D620B1F61376D00AEA609 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0D9D61E51F61369E00AEA609 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D9D61EC1F61369E00AEA609;
+			remoteInfo = Sunny;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D9D61ED1F61369E00AEA609 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9D61F01F61369E00AEA609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D9D61F21F61369E00AEA609 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D9D61F51F61369E00AEA609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D9D61F71F61369E00AEA609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D9D61FA1F61369E00AEA609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0D9D61FC1F61369E00AEA609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D9D62061F61376D00AEA609 /* SunnyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunnyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D9D62081F61376D00AEA609 /* SunnyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunnyTests.swift; sourceTree = "<group>"; };
+		0D9D620A1F61376D00AEA609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		140EFC170C29AB6BDA362B1C /* Pods_Sunny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B035429B202655A5F380AE /* Pods-Sunny-SunnyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny-SunnyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny-SunnyTests/Pods-Sunny-SunnyTests.release.xcconfig"; sourceTree = "<group>"; };
+		A3B1E384177E0FEF868C519E /* Pods-Sunny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny/Pods-Sunny.release.xcconfig"; sourceTree = "<group>"; };
+		B80472ADBEB3B7846B5D3AE4 /* Pods-Sunny-SunnyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny-SunnyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny-SunnyTests/Pods-Sunny-SunnyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C46517901182AAE810FF5C27 /* Pods_Sunny_SunnyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sunny_SunnyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF5DA63AD6DECE4D6AF3BF33 /* Pods-Sunny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sunny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sunny/Pods-Sunny.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D9D61EA1F61369E00AEA609 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF457FA6D57698B4EA72EEC3 /* Pods_Sunny.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D9D62031F61376D00AEA609 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1989DDA2DD911A3C3F096034 /* Pods_Sunny_SunnyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D9D61E41F61369E00AEA609 = {
+			isa = PBXGroup;
+			children = (
+				0D9D61EF1F61369E00AEA609 /* Sunny */,
+				0D9D62071F61376D00AEA609 /* SunnyTests */,
+				0D9D61EE1F61369E00AEA609 /* Products */,
+				82CAAC98F354FEE837597D40 /* Pods */,
+				1DDD2413E0F65F779296D708 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0D9D61EE1F61369E00AEA609 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D61ED1F61369E00AEA609 /* Sunny.app */,
+				0D9D62061F61376D00AEA609 /* SunnyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D9D61EF1F61369E00AEA609 /* Sunny */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D61F01F61369E00AEA609 /* AppDelegate.swift */,
+				0D9D61F21F61369E00AEA609 /* ViewController.swift */,
+				0D9D61F41F61369E00AEA609 /* Main.storyboard */,
+				0D9D61F71F61369E00AEA609 /* Assets.xcassets */,
+				0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */,
+				0D9D61FC1F61369E00AEA609 /* Info.plist */,
+			);
+			path = Sunny;
+			sourceTree = "<group>";
+		};
+		0D9D62071F61376D00AEA609 /* SunnyTests */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D62081F61376D00AEA609 /* SunnyTests.swift */,
+				0D9D620A1F61376D00AEA609 /* Info.plist */,
+			);
+			path = SunnyTests;
+			sourceTree = "<group>";
+		};
+		1DDD2413E0F65F779296D708 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				140EFC170C29AB6BDA362B1C /* Pods_Sunny.framework */,
+				C46517901182AAE810FF5C27 /* Pods_Sunny_SunnyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82CAAC98F354FEE837597D40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF5DA63AD6DECE4D6AF3BF33 /* Pods-Sunny.debug.xcconfig */,
+				A3B1E384177E0FEF868C519E /* Pods-Sunny.release.xcconfig */,
+				B80472ADBEB3B7846B5D3AE4 /* Pods-Sunny-SunnyTests.debug.xcconfig */,
+				43B035429B202655A5F380AE /* Pods-Sunny-SunnyTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D9D61EC1F61369E00AEA609 /* Sunny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D9D61FF1F61369E00AEA609 /* Build configuration list for PBXNativeTarget "Sunny" */;
+			buildPhases = (
+				9162B6203E42FE5EEBE5D47B /* [CP] Check Pods Manifest.lock */,
+				0D9D61E91F61369E00AEA609 /* Sources */,
+				0D9D61EA1F61369E00AEA609 /* Frameworks */,
+				0D9D61EB1F61369E00AEA609 /* Resources */,
+				5D75B36EBE25AFCE2B3CCD86 /* [CP] Embed Pods Frameworks */,
+				A2B4A35918FD40FC8CE36986 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sunny;
+			productName = Sunny;
+			productReference = 0D9D61ED1F61369E00AEA609 /* Sunny.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D9D62051F61376D00AEA609 /* SunnyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D9D620F1F61376D00AEA609 /* Build configuration list for PBXNativeTarget "SunnyTests" */;
+			buildPhases = (
+				7A53F80BB7F124483917C49C /* [CP] Check Pods Manifest.lock */,
+				0D9D62021F61376D00AEA609 /* Sources */,
+				0D9D62031F61376D00AEA609 /* Frameworks */,
+				0D9D62041F61376D00AEA609 /* Resources */,
+				FE470B23B00E5AA3D6ABBBF1 /* [CP] Embed Pods Frameworks */,
+				9CABF5A8DE1328039C044F3E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D9D620C1F61376D00AEA609 /* PBXTargetDependency */,
+			);
+			name = SunnyTests;
+			productName = SunnyTests;
+			productReference = 0D9D62061F61376D00AEA609 /* SunnyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D9D61E51F61369E00AEA609 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = com.owlyapps;
+				TargetAttributes = {
+					0D9D61EC1F61369E00AEA609 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					0D9D62051F61376D00AEA609 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0D9D61EC1F61369E00AEA609;
+					};
+				};
+			};
+			buildConfigurationList = 0D9D61E81F61369E00AEA609 /* Build configuration list for PBXProject "Sunny" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0D9D61E41F61369E00AEA609;
+			productRefGroup = 0D9D61EE1F61369E00AEA609 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D9D61EC1F61369E00AEA609 /* Sunny */,
+				0D9D62051F61376D00AEA609 /* SunnyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D9D61EB1F61369E00AEA609 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */,
+				0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */,
+				0D9D61F61F61369E00AEA609 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D9D62041F61376D00AEA609 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D75B36EBE25AFCE2B3CCD86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny/Pods-Sunny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A53F80BB7F124483917C49C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9162B6203E42FE5EEBE5D47B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9CABF5A8DE1328039C044F3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny-SunnyTests/Pods-Sunny-SunnyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B4A35918FD40FC8CE36986 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny/Pods-Sunny-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE470B23B00E5AA3D6ABBBF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sunny-SunnyTests/Pods-Sunny-SunnyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D9D61E91F61369E00AEA609 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D9D61F31F61369E00AEA609 /* ViewController.swift in Sources */,
+				0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D9D62021F61376D00AEA609 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D9D62091F61376D00AEA609 /* SunnyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D9D620C1F61376D00AEA609 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D9D61EC1F61369E00AEA609 /* Sunny */;
+			targetProxy = 0D9D620B1F61376D00AEA609 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0D9D61F41F61369E00AEA609 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D9D61F51F61369E00AEA609 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D9D61FA1F61369E00AEA609 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0D9D61FD1F61369E00AEA609 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0D9D61FE1F61369E00AEA609 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D9D62001F61369E00AEA609 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5DA63AD6DECE4D6AF3BF33 /* Pods-Sunny.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sunny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.owlyapps.Sunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0D9D62011F61369E00AEA609 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B1E384177E0FEF868C519E /* Pods-Sunny.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sunny/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.owlyapps.Sunny;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0D9D620D1F61376D00AEA609 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80472ADBEB3B7846B5D3AE4 /* Pods-Sunny-SunnyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SunnyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.owlyapps.SunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunny.app/Sunny";
+			};
+			name = Debug;
+		};
+		0D9D620E1F61376D00AEA609 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B035429B202655A5F380AE /* Pods-Sunny-SunnyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SunnyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.owlyapps.SunnyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sunny.app/Sunny";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D9D61E81F61369E00AEA609 /* Build configuration list for PBXProject "Sunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D9D61FD1F61369E00AEA609 /* Debug */,
+				0D9D61FE1F61369E00AEA609 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D9D61FF1F61369E00AEA609 /* Build configuration list for PBXNativeTarget "Sunny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D9D62001F61369E00AEA609 /* Debug */,
+				0D9D62011F61369E00AEA609 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D9D620F1F61376D00AEA609 /* Build configuration list for PBXNativeTarget "SunnyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D9D620D1F61376D00AEA609 /* Debug */,
+				0D9D620E1F61376D00AEA609 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D9D61E51F61369E00AEA609 /* Project object */;
+}
