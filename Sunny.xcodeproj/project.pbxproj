@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0D0868161F62A3BB00F92EDF /* LocationServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0868151F62A3BB00F92EDF /* LocationServiceSpec.swift */; };
-		0D0868181F62AA8300F92EDF /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D0868171F62AA8300F92EDF /* Locations.plist */; };
+		0D08681B1F62B57500F92EDF /* UIBarButtonItem+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08681A1F62B57500F92EDF /* UIBarButtonItem+Specs.swift */; };
+		0D08681D1F62B71200F92EDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08681C1F62B71200F92EDF /* MainViewController.swift */; };
+		0D0868251F62BBC100F92EDF /* LocationAddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0868231F62BBC100F92EDF /* LocationAddingViewController.swift */; };
+		0D0868261F62BBC100F92EDF /* LocationAddingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */; };
 		0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D61F01F61369E00AEA609 /* AppDelegate.swift */; };
 		0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F71F61369E00AEA609 /* Assets.xcassets */; };
 		0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */; };
@@ -39,7 +42,10 @@
 
 /* Begin PBXFileReference section */
 		0D0868151F62A3BB00F92EDF /* LocationServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceSpec.swift; path = Services/LocationServiceSpec.swift; sourceTree = "<group>"; };
-		0D0868171F62AA8300F92EDF /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		0D08681A1F62B57500F92EDF /* UIBarButtonItem+Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Specs.swift"; path = "Extensions/UIBarButtonItem+Specs.swift"; sourceTree = "<group>"; };
+		0D08681C1F62B71200F92EDF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0D0868231F62BBC100F92EDF /* LocationAddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAddingViewController.swift; path = "Modules/Location Adding/LocationAddingViewController.swift"; sourceTree = "<group>"; };
+		0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationAddingViewController.xib; path = "Modules/Location Adding/LocationAddingViewController.xib"; sourceTree = "<group>"; };
 		0D9D61ED1F61369E00AEA609 /* Sunny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D9D61F01F61369E00AEA609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D9D61F71F61369E00AEA609 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0868191F62B55300F92EDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D08681A1F62B57500F92EDF /* UIBarButtonItem+Specs.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		0D08681E1F62B7FD00F92EDF /* Location Adding */ = {
+			isa = PBXGroup;
+			children = (
+				0D0868231F62BBC100F92EDF /* LocationAddingViewController.swift */,
+				0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */,
+			);
+			name = "Location Adding";
+			sourceTree = "<group>";
+		};
 		0D9D61E41F61369E00AEA609 = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +140,6 @@
 				0D9D61F71F61369E00AEA609 /* Assets.xcassets */,
 				0D9D61F91F61369E00AEA609 /* LaunchScreen.storyboard */,
 				0D9D61FC1F61369E00AEA609 /* Info.plist */,
-				0D0868171F62AA8300F92EDF /* Locations.plist */,
 			);
 			path = Sunny;
 			sourceTree = "<group>";
@@ -125,6 +147,7 @@
 		0D9D62071F61376D00AEA609 /* SunnyTests */ = {
 			isa = PBXGroup;
 			children = (
+				0D0868191F62B55300F92EDF /* Extensions */,
 				0D9D62271F61556E00AEA609 /* Fixtures */,
 				0D9D620A1F61376D00AEA609 /* Info.plist */,
 			);
@@ -143,7 +166,9 @@
 		0D9D62171F613F0F00AEA609 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0D08681E1F62B7FD00F92EDF /* Location Adding */,
 				0D9D62181F613F3B00AEA609 /* Locations */,
+				0D08681C1F62B71200F92EDF /* MainViewController.swift */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -295,7 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D0868181F62AA8300F92EDF /* Locations.plist in Resources */,
+				0D0868261F62BBC100F92EDF /* LocationAddingViewController.xib in Resources */,
 				0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */,
 				0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */,
 			);
@@ -408,12 +433,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0868251F62BBC100F92EDF /* LocationAddingViewController.swift in Sources */,
 				0D9D621F1F6141A500AEA609 /* LocationsViewModel.swift in Sources */,
 				0D9D621A1F613F6500AEA609 /* LocationsViewController.swift in Sources */,
 				0D9D622F1F61580100AEA609 /* LocationService.swift in Sources */,
 				0D9D61F11F61369E00AEA609 /* AppDelegate.swift in Sources */,
 				0D9D62151F613C4500AEA609 /* ControllerFactory.swift in Sources */,
 				0D9D62241F6143AF00AEA609 /* LocationsDataSource.swift in Sources */,
+				0D08681D1F62B71200F92EDF /* MainViewController.swift in Sources */,
 				0D9D62131F613BAC00AEA609 /* FlowController.swift in Sources */,
 				0D9D622C1F6155D600AEA609 /* Location.swift in Sources */,
 			);
@@ -426,6 +453,7 @@
 				0D0868161F62A3BB00F92EDF /* LocationServiceSpec.swift in Sources */,
 				0D9D62291F61558B00AEA609 /* Location+Fixture.swift in Sources */,
 				0D9D62221F6141BB00AEA609 /* LocationsViewModelSpec.swift in Sources */,
+				0D08681B1F62B57500F92EDF /* UIBarButtonItem+Specs.swift in Sources */,
 				0D9D621D1F613F7F00AEA609 /* LocationsViewControllerSpec.swift in Sources */,
 				0D9D62261F61546100AEA609 /* LocationsDataSourceSpec.swift in Sources */,
 			);

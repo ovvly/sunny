@@ -8,14 +8,14 @@ import RxSwift
 class LocationServiceSpec: QuickSpec {
 
     override func spec() {
-        describe("PlistLocationService") {
-            var sut: PlistLocationService!
+        describe("MainLocationService") {
+            var sut: MainLocationService!
             var disposeBag: DisposeBag!
 
             beforeEach {
                 disposeBag = DisposeBag()
 
-                sut = PlistLocationService()
+                sut = MainLocationService()
             }
 
             describe("add location") {
@@ -75,7 +75,7 @@ class LocationServiceSpec: QuickSpec {
                 context("when using other service for fetching than for saving") {
 
                     beforeEach {
-                        sut = PlistLocationService()
+                        sut = MainLocationService()
 
                         sut.fetchLocations()
                             .subscribe(onNext: { locations in

@@ -2,8 +2,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol LocationsViewControllerDelegate: class {
+    func viewControllerDidAdd(_ viewController: LocationsViewController)
+}
+
 class LocationsViewController: UITableViewController {
     let viewModel: LocationsViewModel
+    weak var delegate: LocationsViewControllerDelegate?
 
     private let dataSource: LocationsDataSource
     private let disposeBag = DisposeBag()
@@ -23,7 +28,19 @@ class LocationsViewController: UITableViewController {
         super.viewDidLoad()
 
         setupTableView()
+        setupNavigationItem()
         fetchLocations()
+    }
+
+    func added(location: Location) {
+        let newLocations = viewModel.add(location: location)
+        refreshTableView(with: newLocations)
+    }
+
+    //MARK: Actions
+
+    @IBAction private func addButtonTapped() {
+        delegate?.viewControllerDidAdd(self)
     }
 
     //MARK: Helpers
@@ -34,11 +51,20 @@ class LocationsViewController: UITableViewController {
         dataSource.registerCells(for: tableView)
     }
 
+    private func setupNavigationItem() {
+        navigationItem.title = "Locations"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+    }
+
     private func fetchLocations() {
-        viewModel.loadLocations()
+        refreshTableView(with: viewModel.loadLocations())
+    }
+
+    private func refreshTableView(with locations: Observable<[Location]>) {
+        locations
             .asDriver(onErrorJustReturn: [])
-            .drive(onNext: { [unowned self] locations in
-                self.dataSource.locations = locations
+            .drive(onNext: { [unowned self] in
+                self.dataSource.locations = $0
                 self.tableView.reloadData()
             })
             .disposed(by: disposeBag)

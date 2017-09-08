@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocationAddingViewController" customModule="Sunny" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="IGd-b9-H3Z" id="pyh-Fp-mNb"/>
+                <outlet property="locationTextField" destination="hMe-M0-oVL" id="3Xk-1G-EKk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-b9-H3Z">
+                    <rect key="frame" x="10" y="80" width="355" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="8aQ-Gc-9fv"/>
+                    </constraints>
+                    <state key="normal" title="Add"/>
+                    <connections>
+                        <action selector="addTapped:" destination="-1" eventType="touchUpInside" id="4RF-Pu-ggz"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-M0-oVL">
+                    <rect key="frame" x="10" y="30" width="355" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cxK-xC-fel"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hMe-M0-oVL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="9Dr-Xz-eVB"/>
+                <constraint firstAttribute="trailing" secondItem="IGd-b9-H3Z" secondAttribute="trailing" constant="10" id="9FJ-v1-RnZ"/>
+                <constraint firstAttribute="trailing" secondItem="hMe-M0-oVL" secondAttribute="trailing" constant="10" id="bBF-i0-C5R"/>
+                <constraint firstItem="IGd-b9-H3Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ch2-uh-ahO"/>
+                <constraint firstItem="hMe-M0-oVL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="vph-gZ-pL7"/>
+                <constraint firstItem="IGd-b9-H3Z" firstAttribute="top" secondItem="hMe-M0-oVL" secondAttribute="bottom" constant="10" id="zwk-tF-QfW"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="26.5" y="-224"/>
+        </view>
+    </objects>
+</document>

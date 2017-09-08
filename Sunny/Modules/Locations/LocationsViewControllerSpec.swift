@@ -11,11 +11,15 @@ class LocationsViewControllerSpec: QuickSpec {
             var sut: LocationsViewController!
             var fakeViewModel: FakeLocationsViewModel!
             var fakeDataSource: FakeLocationsDataSource!
+            var fakeDelegate: FakeLocationViewControllerDelegate!
 
             beforeEach {
                 fakeViewModel = FakeLocationsViewModel()
                 fakeDataSource = FakeLocationsDataSource()
+                fakeDelegate = FakeLocationViewControllerDelegate()
+
                 sut = LocationsViewController(viewModel: fakeViewModel, dataSource: fakeDataSource)
+                sut.delegate = fakeDelegate
             }
 
             describe("view did load") {
@@ -36,6 +40,32 @@ class LocationsViewControllerSpec: QuickSpec {
                     //TODO: Find better way to test this than fake data source injection
                     it("should register cells for table view") {
                         expect(fakeDataSource.didRegisterCells) == true
+                    }
+                }
+
+                describe("navigation item") {
+
+                    it("should have title") {
+                        expect(sut.navigationItem.title) == "Locations"
+                    }
+
+                    describe("add bar button item") {
+                        var buttonItem: UIBarButtonItem!
+
+                        beforeEach {
+                            buttonItem = sut.navigationItem.rightBarButtonItem
+                        }
+
+                        describe("when is tapped") {
+
+                            beforeEach {
+                                buttonItem.simulateTap()
+                            }
+
+                            it("should inform delegate") {
+                                expect(fakeDelegate.capturedViewController) === sut
+                            }
+                        }
                     }
                 }
 
@@ -71,9 +101,15 @@ class LocationsViewControllerSpec: QuickSpec {
 
 private class FakeLocationsViewModel: LocationsViewModel {
     var didRequestedLocations = false
+    var addedLocation: Location? = nil
 
     func loadLocations() -> Observable<[Location]> {
         didRequestedLocations = true
+        return Observable.just(Location.fixture())
+    }
+
+    func add(location: Location) -> Observable<[Location]> {
+        addedLocation = location
         return Observable.just(Location.fixture())
     }
 }
@@ -91,5 +127,13 @@ private class FakeTableView: UITableView {
 
     override func reloadData() {
         didReloadData = true
+    }
+}
+
+private class FakeLocationViewControllerDelegate: LocationsViewControllerDelegate {
+    var capturedViewController: UIViewController? = nil
+
+    func viewControllerDidAdd(_ viewController: LocationsViewController) {
+        capturedViewController = viewController
     }
 }

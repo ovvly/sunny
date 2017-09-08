@@ -6,14 +6,14 @@ protocol LocationService {
     func add(location: Location) -> Observable<[Location]>
 }
 
-class PlistLocationService: LocationService {
+class MainLocationService: LocationService {
+    private static let locationsFileName = "Locations"
+
     private var locations = [Location]()
 
     func fetchLocations() -> Observable<[Location]> {
         do {
-            let url = try urlForLocations()
-            locations = try readLocations(from: url)
-
+            locations = try readLocations()
         } catch let error {
             return Observable.error(error)
         }
@@ -23,7 +23,7 @@ class PlistLocationService: LocationService {
     func add(location: Location) -> Observable<[Location]> {
         locations.append(location)
         do {
-            try saveLocationsToPlist()
+            try writeLocations()
         } catch let error {
             return Observable.error(error)
         }
@@ -32,22 +32,24 @@ class PlistLocationService: LocationService {
 
     //MARK: Helpers
 
-    private func urlForLocations() throws -> URL {
-        guard let url = Bundle.main.url(forResource: "Locations", withExtension: "plist") else {
+    private func pathForLocations() throws -> String {
+        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
             throw RxError.noElements
         }
-        return url
+        return url.appendingPathComponent(MainLocationService.locationsFileName).path
     }
 
-    private func readLocations(from url: URL) throws -> [Location] {
-        let data = try Data(contentsOf: url)
-        guard let result = try PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String] else {
-            throw RxError.noElements
+    private func readLocations() throws -> [Location] {
+        let path = try pathForLocations()
+
+        guard let result = NSKeyedUnarchiver.unarchiveObject(withFile: path) as? [Location] else {
+            return []
         }
         return result
     }
 
-    private func saveLocationsToPlist() throws {
-        try (locations as NSArray).write(to: urlForLocations(), atomically: true)
+    private func writeLocations() throws {
+        let path = try pathForLocations()
+        NSKeyedArchiver.archiveRootObject(locations, toFile: path)
     }
 }
