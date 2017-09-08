@@ -43,4 +43,8 @@ private class FakeLocationService: LocationService {
     func fetchLocations() -> Observable<[Location]> {
         return Observable.just(locations)
     }
+
+    func add(location: String) -> Observable<[Location]> {
+        return Observable.empty()
+    }
 }
