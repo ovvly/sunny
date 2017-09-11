@@ -88,7 +88,7 @@ class LocationsViewControllerSpec: QuickSpec {
                 }
 
                 it("should set locations in data source") {
-                    expect(fakeDataSource.locations) == Location.fixture()
+                    expect(fakeDataSource.locations) == [Location.fixture()]
                 }
 
                 it("should reload table view") {
@@ -105,12 +105,12 @@ private class FakeLocationsViewModel: LocationsViewModel {
 
     func loadLocations() -> Observable<[Location]> {
         didRequestedLocations = true
-        return Observable.just(Location.fixture())
+        return Observable.just([Location.fixture()])
     }
 
     func add(location: Location) -> Observable<[Location]> {
         addedLocation = location
-        return Observable.just(Location.fixture())
+        return Observable.just([Location.fixture()])
     }
 }
 

@@ -6,6 +6,7 @@ protocol FlowController {
 
 final class MainFlowController: FlowController {
     fileprivate let controllerFactory: ControllerFactory
+    fileprivate let dependencyContainer: DependencyContainer
 
     fileprivate lazy var mainViewController: UIViewController = {
         let mainController = self.controllerFactory.buildMainViewController()
@@ -13,12 +14,8 @@ final class MainFlowController: FlowController {
         return mainController
     }()
 
-    convenience init() {
-        let controllerFactory = MainControllerFactory()
-        self.init(controllerFactory: controllerFactory)
-    }
-
-    init(controllerFactory: ControllerFactory) {
+    init(dependencyContainer: DependencyContainer, controllerFactory: ControllerFactory = MainControllerFactory()) {
+        self.dependencyContainer = dependencyContainer
         self.controllerFactory = controllerFactory
     }
 

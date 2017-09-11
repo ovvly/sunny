@@ -38,7 +38,7 @@ class LocationsViewModelSpec: QuickSpec {
 }
 
 private class FakeLocationService: LocationService {
-    let locations = Location.fixture()
+    let locations = [Location.fixture()]
 
     func fetchLocations() -> Observable<[Location]> {
         return Observable.just(locations)

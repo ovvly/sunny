@@ -30,7 +30,7 @@ class LocationsDataSourceSpec: QuickSpec {
                 context("after setting locations") {
 
                     beforeEach {
-                        sut.locations = Location.fixture()
+                        sut.locations = [Location.fixture()]
                         
                         result = sut.tableView(UITableView(), numberOfRowsInSection: 0)
                     }
@@ -45,7 +45,7 @@ class LocationsDataSourceSpec: QuickSpec {
                 var result: UITableViewCell!
 
                 beforeEach {
-                    sut.locations = Location.fixture()
+                    sut.locations = [Location.fixture()]
                     let tableView = UITableView()
                     tableView.dataSource = sut
                     sut.registerCells(for: tableView)

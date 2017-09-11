@@ -18,6 +18,10 @@ class LocationServiceSpec: QuickSpec {
                 sut = MainLocationService()
             }
 
+            afterEach {
+                clearLocations()
+            }
+
             describe("add location") {
                 var result: [Location]!
 
@@ -91,4 +95,9 @@ class LocationServiceSpec: QuickSpec {
             }
         }
     }
+}
+
+private func clearLocations() {
+    let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent("Locations")
+    try? FileManager.default.removeItem(at: url)
 }
