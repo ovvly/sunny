@@ -1,11 +1,11 @@
 import Foundation
 
 struct Weather {
-    let temperature: String
-    let humidity: String
-    let pressure: String
-    let tempMin: String
-    let tempMax: String
+    let temperature: Double
+    let humidity: Double
+    let pressure: Double
+    let tempMin: Double
+    let tempMax: Double
 }
 
 extension Weather: Equatable { }

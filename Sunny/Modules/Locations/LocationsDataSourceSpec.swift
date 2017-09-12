@@ -10,7 +10,7 @@ class LocationsDataSourceSpec: QuickSpec {
             var sut: LocationsDataSource!
 
             beforeEach {
-                sut = LocationsDataSource()
+                sut = MainLocationsDataSource()
             }
 
             describe("table view number of rows in section") {

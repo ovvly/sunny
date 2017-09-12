@@ -11,6 +11,11 @@
 		0D08681B1F62B57500F92EDF /* UIBarButtonItem+Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D08681A1F62B57500F92EDF /* UIBarButtonItem+Specs.swift */; };
 		0D0868251F62BBC100F92EDF /* LocationAddingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0868231F62BBC100F92EDF /* LocationAddingViewController.swift */; };
 		0D0868261F62BBC100F92EDF /* LocationAddingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */; };
+		0D91C2C11F67D283004C5C74 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91C2BF1F67D283004C5C74 /* WeatherViewController.swift */; };
+		0D91C2C21F67D283004C5C74 /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D91C2C01F67D283004C5C74 /* WeatherViewController.xib */; };
+		0D91C2C41F67D297004C5C74 /* WeatherViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91C2C31F67D297004C5C74 /* WeatherViewControllerSpec.swift */; };
+		0D91C2C61F67D35A004C5C74 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91C2C51F67D35A004C5C74 /* WeatherViewModel.swift */; };
+		0D91C2C81F67D388004C5C74 /* WeatherViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D91C2C71F67D388004C5C74 /* WeatherViewModelSpec.swift */; };
 		0D98C5101F66909C00D59298 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98C50F1F66909C00D59298 /* WeatherService.swift */; };
 		0D98C5121F66915400D59298 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98C5111F66915400D59298 /* Weather.swift */; };
 		0D98C5171F66928C00D59298 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98C5161F66928C00D59298 /* APIClient.swift */; };
@@ -60,6 +65,11 @@
 		0D08681A1F62B57500F92EDF /* UIBarButtonItem+Specs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Specs.swift"; path = "Extensions/UIBarButtonItem+Specs.swift"; sourceTree = "<group>"; };
 		0D0868231F62BBC100F92EDF /* LocationAddingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAddingViewController.swift; path = "Modules/Location Adding/LocationAddingViewController.swift"; sourceTree = "<group>"; };
 		0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LocationAddingViewController.xib; path = "Modules/Location Adding/LocationAddingViewController.xib"; sourceTree = "<group>"; };
+		0D91C2BF1F67D283004C5C74 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewController.swift; path = Modules/Weather/WeatherViewController.swift; sourceTree = "<group>"; };
+		0D91C2C01F67D283004C5C74 /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherViewController.xib; path = Modules/Weather/WeatherViewController.xib; sourceTree = "<group>"; };
+		0D91C2C31F67D297004C5C74 /* WeatherViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewControllerSpec.swift; path = Modules/Weather/WeatherViewControllerSpec.swift; sourceTree = "<group>"; };
+		0D91C2C51F67D35A004C5C74 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewModel.swift; path = Modules/Weather/WeatherViewModel.swift; sourceTree = "<group>"; };
+		0D91C2C71F67D388004C5C74 /* WeatherViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewModelSpec.swift; path = Modules/Weather/WeatherViewModelSpec.swift; sourceTree = "<group>"; };
 		0D98C50F1F66909C00D59298 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherService.swift; path = Services/WeatherService.swift; sourceTree = "<group>"; };
 		0D98C5111F66915400D59298 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Weather.swift; path = Model/Weather.swift; sourceTree = "<group>"; };
 		0D98C5131F6691F900D59298 /* WeatherServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherServiceSpec.swift; path = Services/WeatherServiceSpec.swift; sourceTree = "<group>"; };
@@ -137,6 +147,18 @@
 				0D0868241F62BBC100F92EDF /* LocationAddingViewController.xib */,
 			);
 			name = "Location Adding";
+			sourceTree = "<group>";
+		};
+		0D91C2BA1F67D057004C5C74 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				0D91C2BF1F67D283004C5C74 /* WeatherViewController.swift */,
+				0D91C2C01F67D283004C5C74 /* WeatherViewController.xib */,
+				0D91C2C31F67D297004C5C74 /* WeatherViewControllerSpec.swift */,
+				0D91C2C51F67D35A004C5C74 /* WeatherViewModel.swift */,
+				0D91C2C71F67D388004C5C74 /* WeatherViewModelSpec.swift */,
+			);
+			name = Weather;
 			sourceTree = "<group>";
 		};
 		0D98C5151F66927300D59298 /* Networking */ = {
@@ -240,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				0D98C5221F669A0800D59298 /* MainViewController.swift */,
+				0D91C2BA1F67D057004C5C74 /* Weather */,
 				0D08681E1F62B7FD00F92EDF /* Location Adding */,
 				0D9D62181F613F3B00AEA609 /* Locations */,
 			);
@@ -397,6 +420,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D91C2C21F67D283004C5C74 /* WeatherViewController.xib in Resources */,
 				0D0868261F62BBC100F92EDF /* LocationAddingViewController.xib in Resources */,
 				0D9D61FB1F61369E00AEA609 /* LaunchScreen.storyboard in Resources */,
 				0D9D61F81F61369E00AEA609 /* Assets.xcassets in Resources */,
@@ -513,12 +537,14 @@
 				0D98C5211F6699E800D59298 /* AppConfiguration.swift in Sources */,
 				0D0868251F62BBC100F92EDF /* LocationAddingViewController.swift in Sources */,
 				0D98C5281F669EFC00D59298 /* DependencyContainer.swift in Sources */,
+				0D91C2C11F67D283004C5C74 /* WeatherViewController.swift in Sources */,
 				0D98C51E1F6693EC00D59298 /* Weather+Resource.swift in Sources */,
 				0D98C5311F66A4C400D59298 /* Weather+JSONMappable.swift in Sources */,
 				0D98C5171F66928C00D59298 /* APIClient.swift in Sources */,
 				0D9D621F1F6141A500AEA609 /* LocationsViewModel.swift in Sources */,
 				0D98C5231F669A0800D59298 /* MainViewController.swift in Sources */,
 				0D98C5191F6692B400D59298 /* Resource.swift in Sources */,
+				0D91C2C61F67D35A004C5C74 /* WeatherViewModel.swift in Sources */,
 				0D98C5101F66909C00D59298 /* WeatherService.swift in Sources */,
 				0D9D621A1F613F6500AEA609 /* LocationsViewController.swift in Sources */,
 				0D98C5121F66915400D59298 /* Weather.swift in Sources */,
@@ -540,11 +566,13 @@
 				0D0868161F62A3BB00F92EDF /* LocationServiceSpec.swift in Sources */,
 				0D9D62291F61558B00AEA609 /* Location+Fixture.swift in Sources */,
 				0D98C5251F669B9400D59298 /* AppConfigurationSpec.swift in Sources */,
+				0D91C2C41F67D297004C5C74 /* WeatherViewControllerSpec.swift in Sources */,
 				0D9D62221F6141BB00AEA609 /* LocationsViewModelSpec.swift in Sources */,
 				0D08681B1F62B57500F92EDF /* UIBarButtonItem+Specs.swift in Sources */,
 				0D98C5331F66A4E100D59298 /* WeatherJSONMappableSpec.swift in Sources */,
 				0D98C52C1F66A1CD00D59298 /* APIClientSpec.swift in Sources */,
 				0D9D621D1F613F7F00AEA609 /* LocationsViewControllerSpec.swift in Sources */,
+				0D91C2C81F67D388004C5C74 /* WeatherViewModelSpec.swift in Sources */,
 				0D9D62261F61546100AEA609 /* LocationsDataSourceSpec.swift in Sources */,
 				0D98C5361F66AD8200D59298 /* Weather+Fixture.swift in Sources */,
 				0D98C52A1F66A1A500D59298 /* WeatherResourceSpec.swift in Sources */,

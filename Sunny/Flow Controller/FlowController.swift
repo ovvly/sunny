@@ -6,7 +6,6 @@ protocol FlowController {
 
 final class MainFlowController: FlowController {
     fileprivate let controllerFactory: ControllerFactory
-    fileprivate let dependencyContainer: DependencyContainer
 
     fileprivate lazy var mainViewController: UIViewController = {
         let mainController = self.controllerFactory.buildMainViewController()
@@ -14,8 +13,12 @@ final class MainFlowController: FlowController {
         return mainController
     }()
 
-    init(dependencyContainer: DependencyContainer, controllerFactory: ControllerFactory = MainControllerFactory()) {
-        self.dependencyContainer = dependencyContainer
+    convenience init(dependencyContainer: DependencyContainer) {
+        let controllerFactory = MainControllerFactory(dependencyContainer: dependencyContainer)
+        self.init(controllerFactory: controllerFactory)
+    }
+
+    init(controllerFactory: ControllerFactory) {
         self.controllerFactory = controllerFactory
     }
 
@@ -33,6 +36,11 @@ extension MainFlowController: LocationsViewControllerDelegate {
         locationAddingViewController.delegate = self
         viewController.modalPresentationStyle = .formSheet
         viewController.present(locationAddingViewController, animated: true)
+    }
+
+    func viewController(_ viewController: LocationsViewController, selected location: Location) {
+        let weatherViewController = controllerFactory.buildWeatherViewController(with: location)
+        viewController.navigationController?.pushViewController(weatherViewController, animated: true)
     }
 }
 

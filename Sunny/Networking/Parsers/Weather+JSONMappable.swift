@@ -6,20 +6,20 @@ extension Weather: JSONMappable {
             throw ParsingError.InvalidJSON(json)
         }
 
-        let temperature = try String.extract(from: mainJson, key: "temp")
-        let humidity = try String.extract(from: mainJson, key: "humidity")
-        let pressure = try String.extract(from: mainJson, key: "pressure")
-        let tempMin = try String.extract(from: mainJson, key: "temp_min")
-        let tempMax = try String.extract(from: mainJson, key: "temp_max")
+        let temperature = try Double.extract(from: mainJson, key: "temp")
+        let humidity = try Double.extract(from: mainJson, key: "humidity")
+        let pressure = try Double.extract(from: mainJson, key: "pressure")
+        let tempMin = try Double.extract(from: mainJson, key: "temp_min")
+        let tempMax = try Double.extract(from: mainJson, key: "temp_max")
 
         self.init(temperature: temperature, humidity: humidity, pressure: pressure, tempMin: tempMin, tempMax: tempMax)
     }
 }
 
 //TODO: move this helper to separate class when more Resources will be introduced
-private extension String {
-    static func extract(from json: JSON, key: String) throws -> String {
-        guard let value = json[key] as? String else {
+private extension Double {
+    static func extract(from json: JSON, key: String) throws -> Double {
+        guard let value = json[key] as? Double else {
             throw ParsingError.InvalidJSON(json)
         }
         return value

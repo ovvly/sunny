@@ -4,6 +4,7 @@ import RxCocoa
 
 protocol LocationsViewControllerDelegate: class {
     func viewControllerDidAdd(_ viewController: LocationsViewController)
+    func viewController(_ viewController: LocationsViewController, selected location: Location)
 }
 
 class LocationsViewController: UITableViewController {
@@ -13,7 +14,7 @@ class LocationsViewController: UITableViewController {
     private let dataSource: LocationsDataSource
     private let disposeBag = DisposeBag()
 
-    init(viewModel: LocationsViewModel, dataSource: LocationsDataSource = LocationsDataSource()) {
+    init(viewModel: LocationsViewModel, dataSource: LocationsDataSource = MainLocationsDataSource()) {
         self.viewModel = viewModel
         self.dataSource = dataSource
 
@@ -68,5 +69,12 @@ class LocationsViewController: UITableViewController {
                 self.tableView.reloadData()
             })
             .disposed(by: disposeBag)
+    }
+
+    //MARK: UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let location = dataSource.locations[indexPath.row]
+        delegate?.viewController(self, selected: location)
     }
 }

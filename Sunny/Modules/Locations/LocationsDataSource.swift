@@ -1,6 +1,11 @@
 import UIKit
 
-class LocationsDataSource: NSObject, UITableViewDataSource {
+protocol LocationsDataSource: UITableViewDataSource {
+    var locations: [Location] { get set }
+    func registerCells(for tableView: UITableView)
+}
+
+class MainLocationsDataSource: NSObject, LocationsDataSource {
     var locations = [Location]()
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -20,7 +20,7 @@ class WeatherResourceSpec: QuickSpec {
                 }
 
                 it("should have correct parameters") {
-                    expect(result.parameters) == ["q": Location.fixture()]
+                    expect(result.parameters) == ["q": Location.fixture(), "appid": AppConfiguration.apiKey]
                 }
 
                 it("should have correct method") {

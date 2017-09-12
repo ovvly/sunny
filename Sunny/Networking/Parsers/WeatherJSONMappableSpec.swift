@@ -12,11 +12,11 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when initialized with correct json") {
                 beforeEach {
-                    let json = ["main": ["temp": "fixture temp",
-                                "humidity": "fixture humidity",
-                                "pressure": "fixture pressure",
-                                "temp_min": "fixture min temp",
-                                "temp_max": "fixture max temp"]]
+                    let json = ["main": ["temp": 42.0,
+                                "humidity": 42.0,
+                                "pressure": 42.0,
+                                "temp_min": 42.0,
+                                "temp_max": 42.0]]
 
                     result = try? Weather(json: json)
                 }
@@ -28,11 +28,11 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when main key is missing") {
                 beforeEach {
-                    let json = ["temp": "fixture temp",
-                                "humidity": "fixture humidity",
-                                "pressure": "fixture pressure",
-                                "temp_min": "fixture min temp",
-                                "temp_max": "fixture max temp"]
+                    let json = ["temp": 42.0,
+                                "humidity": 42.0,
+                                "pressure": 42.0,
+                                "temp_min": 42.0,
+                                "temp_max": 42.0]
                     do {
                         result = try Weather(json: json)
                     } catch let err {
@@ -47,10 +47,10 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when temp key is missing") {
                 beforeEach {
-                    let json = ["main": ["humidity": "fixture humidity",
-                                         "pressure": "fixture pressure",
-                                         "temp_min": "fixture min temp",
-                                         "temp_max": "fixture max temp"]]
+                    let json = ["main": ["humidity": 42.0,
+                                         "pressure": 42.0,
+                                         "temp_min": 42.0,
+                                         "temp_max": 42.0]]
                     do {
                         result = try Weather(json: json)
                     } catch let err {
@@ -65,10 +65,10 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when humidity key is missing") {
                 beforeEach {
-                    let json = ["main": ["temp": "fixture temp",
-                                         "pressure": "fixture pressure",
-                                         "temp_min": "fixture min temp",
-                                         "temp_max": "fixture max temp"]]
+                    let json = ["main": ["temp": 42.0,
+                                         "pressure": 42.0,
+                                         "temp_min": 42.0,
+                                         "temp_max": 42.0]]
                     do {
                         result = try Weather(json: json)
                     } catch let err {
@@ -83,10 +83,10 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when pressure key is missing") {
                 beforeEach {
-                    let json = ["main": ["temp": "fixture temp",
-                                         "humidity": "fixture humidity",
-                                         "temp_min": "fixture min temp",
-                                         "temp_max": "fixture max temp"]]
+                    let json = ["main": ["temp": 42.0,
+                                         "humidity": 42.0,
+                                         "temp_min": 42.0,
+                                         "temp_max": 42.0]]
                     do {
                         result = try Weather(json: json)
                     } catch let err {
@@ -101,10 +101,10 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when temp_min key is missing") {
                 beforeEach {
-                    let json = ["main": ["temp": "fixture temp",
-                                         "humidity": "fixture humidity",
-                                         "pressure": "fixture pressure",
-                                         "temp_max": "fixture max temp"]]
+                    let json = ["main": ["temp": 42.0,
+                                         "humidity": 42.0,
+                                         "pressure": 42.0,
+                                         "temp_max": 42.0]]
                     do {
                         result = try Weather(json: json)
                     } catch let err {
@@ -119,10 +119,10 @@ class WeatherJSONMappableSpec: QuickSpec {
 
             context("when temp_max key is missing") {
                 beforeEach {
-                    let json = ["main": ["temp": "fixture temp",
-                                         "humidity": "fixture humidity",
-                                         "pressure": "fixture pressure",
-                                         "temp_min": "fixture min temp"]]
+                    let json = ["main": ["temp": 42.0,
+                                         "humidity": 42.0,
+                                         "pressure": 42.0,
+                                         "temp_min": 42.0]]
                     do {
                         result = try Weather(json: json)
                     } catch let err {

@@ -95,6 +95,18 @@ class LocationsViewControllerSpec: QuickSpec {
                     expect(fakeTableView.didReloadData) == true
                 }
             }
+
+            describe("table view did select row at index path") {
+
+                beforeEach {
+                    sut.tableView(UITableView(), didSelectRowAt: IndexPath(row: 0, section: 0))
+                }
+
+                it("should pass location from data source to delegate") {
+                    expect(fakeDelegate.capturedViewController) === sut
+                    expect(fakeDelegate.capturedLocation) == fakeDataSource.locations[0]
+                }
+            }
         }
     }
 }
@@ -114,11 +126,21 @@ private class FakeLocationsViewModel: LocationsViewModel {
     }
 }
 
-private class FakeLocationsDataSource: LocationsDataSource {
+private class FakeLocationsDataSource: NSObject, LocationsDataSource {
     var didRegisterCells = false
 
-    override func registerCells(for tableView: UITableView) {
+    var locations = [Location.fixture()]
+
+    func registerCells(for tableView: UITableView) {
         didRegisterCells = true
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
 
@@ -132,8 +154,14 @@ private class FakeTableView: UITableView {
 
 private class FakeLocationViewControllerDelegate: LocationsViewControllerDelegate {
     var capturedViewController: UIViewController? = nil
+    var capturedLocation: Location? = nil
 
     func viewControllerDidAdd(_ viewController: LocationsViewController) {
         capturedViewController = viewController
+    }
+
+    func viewController(_ viewController: LocationsViewController, selected location: Location) {
+        capturedViewController = viewController
+        capturedLocation = location
     }
 }

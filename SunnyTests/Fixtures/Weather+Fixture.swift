@@ -4,6 +4,6 @@ import Foundation
 
 extension Weather {
     static func fixture() -> Weather {
-        return Weather(temperature: "fixture temp", humidity: "fixture humidity", pressure: "fixture pressure", tempMin: "fixture min temp", tempMax: "fixture max temp")
+        return Weather(temperature: 42, humidity: 42, pressure: 42, tempMin: 42, tempMax: 42)
     }
 }
