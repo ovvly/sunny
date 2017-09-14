@@ -23,7 +23,7 @@ class MainWeatherViewModel: WeatherViewModel {
 
         let weather = fetchTrigger.flatMapFirst {
             weatherService.weather(for: location)
-        }
+        }.share()
 
         temperature = weather.map { $0.temperature.stringValue + " °F" }
         humidity = weather.map { $0.humidity.stringValue + " %" }
