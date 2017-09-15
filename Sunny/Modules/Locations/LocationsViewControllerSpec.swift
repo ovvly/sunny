@@ -98,13 +98,30 @@ class LocationsViewControllerSpec: QuickSpec {
 
             describe("table view did select row at index path") {
 
-                beforeEach {
-                    sut.tableView(UITableView(), didSelectRowAt: IndexPath(row: 0, section: 0))
+                context("when selecting current location") {
+
+                    beforeEach {
+                        sut.viewDidLoad()
+
+                        sut.tableView(UITableView(), didSelectRowAt: IndexPath(row: 0, section: 0))
+                    }
+
+                    it("should pass current location from view model to delegate") {
+                        expect(fakeDelegate.capturedViewController) === sut
+                        expect(fakeDelegate.capturedLocation) == "fixture location"
+                    }
                 }
 
-                it("should pass location from data source to delegate") {
-                    expect(fakeDelegate.capturedViewController) === sut
-                    expect(fakeDelegate.capturedLocation) == fakeDataSource.locations[0]
+                context("when selecting other location") {
+
+                    beforeEach {
+                        sut.tableView(UITableView(), didSelectRowAt: IndexPath(row: 0, section: 1))
+                    }
+
+                    it("should pass location from data source to delegate") {
+                        expect(fakeDelegate.capturedViewController) === sut
+                        expect(fakeDelegate.capturedLocation) == fakeDataSource.locations[0]
+                    }
                 }
             }
         }
@@ -123,6 +140,10 @@ private class FakeLocationsViewModel: LocationsViewModel {
     func add(location: Location) -> Observable<[Location]> {
         addedLocation = location
         return Observable.just([Location.fixture()])
+    }
+
+    func currentLocation() -> Observable<Location> {
+        return Observable.just(Location.fixture())
     }
 }
 

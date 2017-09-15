@@ -34,8 +34,7 @@ extension MainFlowController: LocationsViewControllerDelegate {
     func viewControllerDidAdd(_ viewController: LocationsViewController) {
         let locationAddingViewController = controllerFactory.buildLocationAddingViewController()
         locationAddingViewController.delegate = self
-        viewController.modalPresentationStyle = .formSheet
-        viewController.present(locationAddingViewController, animated: true)
+        viewController.navigationController?.pushViewController(locationAddingViewController, animated: true)
     }
 
     func viewController(_ viewController: LocationsViewController, selected location: Location) {
@@ -46,10 +45,10 @@ extension MainFlowController: LocationsViewControllerDelegate {
 
 extension MainFlowController: LocationAddingViewControllerDelegate {
     func viewController(_ viewController: LocationAddingViewController, didAdd location: Location) {
-        let locationsNavigationController = viewController.presentingViewController as! UINavigationController
-        let locationsViewController = locationsNavigationController.viewControllers.first as! LocationsViewController
-        locationsViewController.added(location: location)
+        if let locationsViewController = viewController.navigationController?.viewControllers.first as? LocationsViewController {
+            locationsViewController.added(location: location)
+        }
 
-        viewController.dismiss(animated: true)
+        _ = viewController.navigationController?.popViewController(animated: true)
     }
 }

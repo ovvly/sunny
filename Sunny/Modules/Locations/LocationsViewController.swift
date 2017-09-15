@@ -12,6 +12,7 @@ class LocationsViewController: UITableViewController {
     weak var delegate: LocationsViewControllerDelegate?
 
     private let dataSource: LocationsDataSource
+    private let currentLocationSubject = PublishSubject<Void>()
     private let disposeBag = DisposeBag()
 
     init(viewModel: LocationsViewModel, dataSource: LocationsDataSource = MainLocationsDataSource()) {
@@ -31,6 +32,7 @@ class LocationsViewController: UITableViewController {
         setupTableView()
         setupNavigationItem()
         fetchLocations()
+        setupCurrentLocationHandling()
     }
 
     func added(location: Location) {
@@ -42,6 +44,17 @@ class LocationsViewController: UITableViewController {
 
     @IBAction private func addButtonTapped() {
         delegate?.viewControllerDidAdd(self)
+    }
+
+    //MARK: UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            currentLocationSubject.onNext(())
+        } else {
+            let location = dataSource.locations[indexPath.row]
+            delegate?.viewController(self, selected: location)
+        }
     }
 
     //MARK: Helpers
@@ -71,10 +84,14 @@ class LocationsViewController: UITableViewController {
             .disposed(by: disposeBag)
     }
 
-    //MARK: UITableViewDelegate
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let location = dataSource.locations[indexPath.row]
-        delegate?.viewController(self, selected: location)
+    private func setupCurrentLocationHandling() {
+        currentLocationSubject
+            .debug()
+            .withLatestFrom(viewModel.currentLocation())
+            .asDriver(onErrorDriveWith: .empty())
+            .drive(onNext: { [unowned self] location in
+                self.delegate?.viewController(self, selected: location)
+            })
+            .disposed(by: disposeBag)
     }
 }

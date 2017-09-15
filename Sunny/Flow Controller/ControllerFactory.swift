@@ -19,7 +19,7 @@ final class MainControllerFactory: ControllerFactory {
     }
 
     func buildLocationsViewController() -> LocationsViewController {
-        let viewModel = MainLocationsViewModel(locationService: dependencyContainer.locationService)
+        let viewModel = MainLocationsViewModel(locationService: dependencyContainer.locationService, locationProvider: MainLocationProvider())
         return LocationsViewController(viewModel: viewModel)
     }
 

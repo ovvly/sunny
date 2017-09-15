@@ -13,6 +13,10 @@ class MainWeatherService: WeatherService {
     }
 
     func weather(for location: Location) -> Observable<Weather> {
-        return client.request(Weather.current(in: location))
+        if let coordinates = location.coordinates {
+            return client.request(Weather.current(at: coordinates))
+        } else {
+            return client.request(Weather.current(at: location))
+        }
     }
 }

@@ -24,21 +24,45 @@ class WeatherServiceSpec: QuickSpec {
 
                 beforeEach {
                     fakeClient.requestResult = Weather.fixture()
-
-                    sut.weather(for: Location.fixture())
-                        .subscribe(onNext: { weather in
-                            result = weather
-                        })
-                        .disposed(by: disposeBag)
                 }
 
-                it("should request client for resource") {
-                    expect(fakeClient.capturedResource as? Resource<Weather>) == Weather.current(in: Location.fixture())
+                context("when location have corect coordinates") {
+                    beforeEach {
+                        sut.weather(for: "42.0 43.0")
+                            .subscribe(onNext: { weather in
+                                result = weather
+                            })
+                            .disposed(by: disposeBag)
+                    }
+
+                    it("should request client for weather at coordinates") {
+                        expect(fakeClient.capturedResource as? Resource<Weather>) == Weather.current(at: (42.0, 43.0))
+                    }
+
+
+                    it("should return response from client") {
+                        expect(result) == fakeClient.requestResult as! Weather?
+                    }
                 }
 
-                it("should return response from client") {
-                    expect(result) == fakeClient.requestResult as! Weather?
+                context("when location doesn't have corect coordinates") {
+                    beforeEach {
+                        sut.weather(for: "fixture")
+                            .subscribe(onNext: { weather in
+                                result = weather
+                            })
+                            .disposed(by: disposeBag)
+                    }
+
+                    it("should request client for weather at coordinates") {
+                        expect(fakeClient.capturedResource as? Resource<Weather>) == Weather.current(at: "fixture")
+                    }
+
+                    it("should return response from client") {
+                        expect(result) == fakeClient.requestResult as! Weather?
+                    }
                 }
+
             }
         }
     }

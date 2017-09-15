@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGd-b9-H3Z">
-                    <rect key="frame" x="10" y="80" width="355" height="44"/>
+                    <rect key="frame" x="10" y="230" width="355" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="8aQ-Gc-9fv"/>
                     </constraints>
@@ -32,7 +32,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Provide location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-M0-oVL">
-                    <rect key="frame" x="10" y="30" width="355" height="40"/>
+                    <rect key="frame" x="10" y="170" width="355" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="cxK-xC-fel"/>
                     </constraints>
@@ -40,18 +40,30 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can add location by city name or by providing latitude and longitude separated wih ; or space" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP9-6x-CGs">
+                    <rect key="frame" x="10" y="80" width="355" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="uHY-i7-pWg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hMe-M0-oVL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="9Dr-Xz-eVB"/>
+                <constraint firstItem="KP9-6x-CGs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="35Q-4Q-C2f"/>
                 <constraint firstAttribute="trailing" secondItem="IGd-b9-H3Z" secondAttribute="trailing" constant="10" id="9FJ-v1-RnZ"/>
                 <constraint firstAttribute="trailing" secondItem="hMe-M0-oVL" secondAttribute="trailing" constant="10" id="bBF-i0-C5R"/>
                 <constraint firstItem="IGd-b9-H3Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="ch2-uh-ahO"/>
+                <constraint firstItem="IGd-b9-H3Z" firstAttribute="top" secondItem="hMe-M0-oVL" secondAttribute="bottom" constant="20" id="frM-mG-KBa"/>
+                <constraint firstItem="hMe-M0-oVL" firstAttribute="top" secondItem="KP9-6x-CGs" secondAttribute="bottom" constant="20" id="tM0-iN-VdY"/>
                 <constraint firstItem="hMe-M0-oVL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="vph-gZ-pL7"/>
-                <constraint firstItem="IGd-b9-H3Z" firstAttribute="top" secondItem="hMe-M0-oVL" secondAttribute="bottom" constant="10" id="zwk-tF-QfW"/>
+                <constraint firstItem="KP9-6x-CGs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="wUq-07-tzI"/>
+                <constraint firstAttribute="trailing" secondItem="KP9-6x-CGs" secondAttribute="trailing" constant="10" id="zrP-bR-M8B"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-            <point key="canvasLocation" x="26.5" y="-224"/>
+            <point key="canvasLocation" x="26.5" y="-224.5"/>
         </view>
     </objects>
 </document>
